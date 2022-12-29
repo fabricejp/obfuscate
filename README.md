@@ -6,6 +6,7 @@ An example:
 
 ```
 $ obfuscate john.doe@megacorp.com
+******oe@me**********
 ```
 
 # Compile
