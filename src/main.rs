@@ -9,7 +9,7 @@ fn main() {
     let email = &args[1];
     let obfuscated_email = obfuscate_email(email);
 
-    //println!("Obfuscated email address: {}", obfuscated_email);
+    //print obfuscated email address: {}", obfuscated_email);
     println!("{}", obfuscated_email);
 }
 
