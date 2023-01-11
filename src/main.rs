@@ -1,36 +1,42 @@
-use std::env;
+use rand::{thread_rng, Rng};
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-    if args.len() != 2 {
-        panic!("Please provide an email address as the command line argument");
-    }
+    let args: Vec<String> = std::env::args().collect();
 
-    let email = &args[1];
-    let obfuscated_email = obfuscate_email(email);
+    let email: &str = &args[1];
 
-    // print obfuscated email address
-    println!("{}", obfuscated_email);
-}
+    let mut before: Vec<char> = Vec::new();
+    let mut after: Vec<char> = Vec::new();
 
-fn obfuscate_email(email: &String) -> String {
-    let mut obfuscated_email = String::new();
-    let mut at_index = 0;
-
-    for (index, c) in email.chars().enumerate() {
+    for (i, c) in email.chars().enumerate() {
         if c == '@' {
-            at_index = index;
+            before = email[..i].chars().collect();
+            after = email[i+1..].chars().collect();
             break;
         }
     }
 
-    for (index, c) in email.chars().enumerate() {
-        if index < at_index - 2 || index > at_index + 2 {
-            obfuscated_email.push('*');
+    let mut rng = thread_rng();
+    let before_index1 = rng.gen_range(0, before.len());
+    let before_index2 = rng.gen_range(0, before.len());
+    let after_index1 = rng.gen_range(0, after.len());
+    let after_index2 = rng.gen_range(0, after.len());
+
+    for i in 0..before.len() {
+        if i == before_index1 || i == before_index2 {
+            continue;
         } else {
-            obfuscated_email.push(c);
+            before[i] = '*';
         }
     }
 
-    obfuscated_email
+    for i in 0..after.len() {
+        if i == after_index1 || i == after_index2 {
+            continue;
+        } else {
+            after[i] = '*';
+        }
+    }
+
+    println!("{}{}{}", before.into_iter().collect::<String>(), "@", after.into_iter().collect::<String>());
 }
