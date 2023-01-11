@@ -35,7 +35,6 @@ $ obfuscate john.doe@mailprovider.org
 ***n**o*@************.*r*
 */
 
-
 /*
 Use the rand crate to create a new thread-local random number generator (RNG).
 The thread_rng() function from the rand crate is used to create the RNG that can be used to generate random numbers.
