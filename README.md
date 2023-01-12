@@ -24,5 +24,5 @@ Assuming Rust is installed
 git clone git@github.com:fabricejp/obfuscate.git \
 cd obfuscate \
 cargo build --release \
-sudo cp target/debug/obfuscate /usr/local/bin/
+sudo cp target/release/obfuscate /usr/local/bin/
 ```
