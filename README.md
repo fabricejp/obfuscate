@@ -5,8 +5,8 @@ Obfuscate an e-mail address by only leaving two asterisk characters before and a
 An example:
 
 ```
-$ obfuscate john.doe@megacorp.com
-******oe@me**********
+$ obfuscate john.doe@mailprovider.org
+******o*@****p**v********
 ```
 
 # Compile
@@ -19,7 +19,7 @@ $ git clone git@github.com:fabricejp/obfuscate.git
 $ cd obfuscate
 ```
 ```
-$ cargo obfuscate
+$ cargo build --release
 ```
 ```
 $ sudo cp target/debug/obfuscate /usr/local/bin/
