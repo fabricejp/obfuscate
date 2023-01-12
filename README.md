@@ -8,7 +8,7 @@
 ```                                                   
 
 
-Obfuscate an e-mail address by only leaving two asterisk characters before and after the @ symbol.
+Obfuscate an email address using asterisk characters, and by only leaving two randomly chosen characters visible before and after the @ symbol.
 
 An example
 
