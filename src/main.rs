@@ -66,7 +66,7 @@ fn main() {
 
     /*
     Create mutable (meaning it can be changed) vectors of characters named 'before' and 'after'
-    a vector is a data structure used to store multiple values of the same type.
+    A vector is a data structure used to store multiple values of the same type.
     In this case, the vector will store characters
     */
 
@@ -101,7 +101,8 @@ fn main() {
 
     /*
     Generate four random numbers between 0 and the length of two given vectors, before and after.
-    Store their values in four separate variables before_index1, before_index2, after_index1, and after_index2.
+    Store their values in four separate variables:
+    before_index1, before_index2, after_index1, and after_index2.
     The random numbers will be used to index into the given vectors.
     */
 
