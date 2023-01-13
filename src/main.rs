@@ -27,7 +27,6 @@
 
 // Prefer 4-space indent, cfr conventions: https://rustc-dev-guide.rust-lang.org/conventions.html
 
-
 // <!-- Cargo.toml file -> [package], [dependencies], [profile.release] aka compiler options  -->
 
 //
