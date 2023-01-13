@@ -20,6 +20,9 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 /// SOFTWARE.
 
+/// Spaces vs tabs
+/// Prefer 4-space indent, cfr conventions: https://rustc-dev-guide.rust-lang.org/conventions.html
+
 /// This program obfuscates e-mail addresses. A couple of exmaples:
 
 /// $ obfuscate john.doe@mailprovider.org
@@ -39,13 +42,13 @@ use rand::{thread_rng, Rng};
 fn main() {
 
     /// Create a vector of strings called args.
-    
-    /// The vector is populated with the command line arguments 
+
+    /// The vector is populated with the command line arguments
     /// passed to the program when it is run.
-    
+
     /// The std::env::args() function returns an iterator over the arguments,
     /// which is then collected into the vector.
-    
+
     let args: Vec<String> = std::env::args().collect();
 
 
@@ -94,7 +97,7 @@ fn main() {
     let after_index1 = rng.gen_range(0, after.len());
     let after_index2 = rng.gen_range(0, after.len());
 
-    /// Loop through an array named "before". 
+    /// Loop through an array named "before".
     /// It is checking the indices of each item in the array,
     /// and if the index is equal to before_index1 or before_index2, it will skip it.
     /// Otherwise, it will set the item at that index to '*'.
@@ -108,7 +111,7 @@ fn main() {
     }
 
     /// Loop through the vector 'after' and replace all of the elements except
-    /// for the ones at 'after_index1' and 'after_index2' with an asterisk '*'.  
+    /// for the ones at 'after_index1' and 'after_index2' with an asterisk '*'.
 
     for i in 0..after.len() {
         if i == after_index1 || i == after_index2 {
@@ -117,11 +120,11 @@ fn main() {
             after[i] = '*';
         }
     }
-    
+
     /// Print out a string that is composed of three components: "before", "@", and "after".
     /// Use the iter() method to convert the "before" and "after" variables into an iterable collection,
     /// then use the collect() method to convert them into a string.
-    /// Finally, the println! macro is used to print out the combined string to the console.    
+    /// Finally, the println! macro is used to print out the combined string to the console.
 
     println!("{}{}{}", before.into_iter().collect::<String>(), "@", after.into_iter().collect::<String>());
 }
