@@ -21,32 +21,8 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
-//
 
-// <!-- Spaces vs tabs -->
-
-// Prefer 4-space indent, cfr conventions: https://rustc-dev-guide.rust-lang.org/conventions.html
-
-// <!-- Cargo.toml file -> [package], [dependencies], [profile.release] aka compiler options  -->
-
-//
-// [package]
-// name = "obfuscate"
-// version = "0.1.0"
-// edition = "2021"
-//
-
-// # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-// [dependencies]
-// rand = "0.7.3"
-
-// [profile.release]
-// opt-level = "z"     # Optimize for size.
-// lto = true          # Enable Link Time Optimization
-// codegen-units = 1   # Reduce number of codegen units to increase optimizations.
-// panic = "abort"     # Abort on panic
-// strip = true        # Automatically strip symbols from the binary.
+// 4-space indent, cfr conventions: https://rustc-dev-guide.rust-lang.org/conventions.html
 
 // <!-- What the program does -->
 
