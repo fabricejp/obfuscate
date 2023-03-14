@@ -3,8 +3,8 @@ Obfuscate an email address using asterisk characters, and by only leaving two ra
 An example
 
 ```
-$ obfuscate john.doe@mailprovider.org
-******o*@****p**v********
+$ obfuscate the@dude.org
+**e@***e.***
 ```
 
 # Compile and install
